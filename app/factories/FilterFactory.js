@@ -2,6 +2,7 @@
 
 app.factory("SearchTermData", function() {
   return {
-    serach: ""
+    search: ""
+    //dont want to have a value on pageload
   };
 });
