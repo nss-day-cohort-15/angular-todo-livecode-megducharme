@@ -4,10 +4,17 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="col-xs-1"><input type="checkbox" name=""/></div>
-        <div class="col-xs-7">{{item.task}}</div>
+        <div class="col-xs-7"><a ng-href="#/items/{{item.id}}">{{item.task}}</a></div>
         <div class="col-xs-2">{{item.dueDate}}</div>
         <div class="col-xs-1">{{item.assignedTo}}</div>
-        <div class="col-xs-1"><button class="btn btn-danger">X</button></div>
+        <div class="col-xs-1"><button class="btn btn-danger" ng-click="itemDelete(item.id)">X</button></div>
       </div>
     </div>
   </div>
+
+
+<!-- ng-href = companion to ng-src - when HTML loads it will scan it for things like this to load things. Most of the time the compilation isnt finished and it will try to get the unfinised source {{}} - ng-href tells the browser to wait to go get these things until Angular is finished - otherwise you will get an error -->
+
+<!-- when you want to see one particular thing in the database in firebase the url is the firebase url /the id -->
+
+<!-- item-details partial is to look at a particular todo list item -->
